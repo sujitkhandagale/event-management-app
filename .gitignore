@@ -1,1 +1,7 @@
 .idea
+.expo
+node_modules
+.env
+
+# Docker
+.docker
