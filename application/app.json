@@ -1,20 +1,28 @@
 {
   "expo": {
-    "name": "application",
-    "slug": "application",
+    "name": "Event Management App",
+    "slug": "event-management-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "application",
+    "scheme": "eventmanagementapp",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "transparent"
+    },
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sujitdev.eventmanagementapp"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#fff"
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#ffffff"
       },
+      "package": "com.sujitdev.eventmanagementapp",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },

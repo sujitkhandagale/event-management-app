@@ -93,14 +93,22 @@ export default function EventCard({
       </View>
       <View style={styles.footerRow}>
         <View style={styles.joinBox}>
-          <View style={styles.joined}>
+          <View style={styles.joinedNumber}>
             <Ionicons name="people" size={18} color={primary} />
             <Text style={styles.members}>
               {members?.length}/{joined}
             </Text>
           </View>
-          <TouchableOpacity style={styles.join} activeOpacity={0.6}>
-            <Text style={styles.joinText}>Join Now</Text>
+          <TouchableOpacity
+            style={{
+              ...styles.join,
+              backgroundColor: isJoined ? primary : '#111',
+            }}
+            activeOpacity={0.6}
+          >
+            <Text style={[styles.joinText]}>
+              {isJoined ? 'Joined' : 'Join Now'}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -173,6 +181,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#555',
   },
+  joinedNumber: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 4,
+  },
+  joined: {
+    backgroundColor: primary,
+  },
   join: {
     backgroundColor: '#111',
     padding: 7,
@@ -182,11 +198,6 @@ const styles = StyleSheet.create({
   joinText: {
     color: '#fff',
     fontSize: 14,
-  },
-  joined: {
-    display: 'flex',
-    flexDirection: 'row',
-    gap: 4,
   },
   joinBox: {
     display: 'flex',
