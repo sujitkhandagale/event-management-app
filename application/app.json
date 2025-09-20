@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/images/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "transparent"
+      "backgroundColor": "#000000"
     },
     "newArchEnabled": true,
     "ios": {
@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "package": "com.sujitdev.eventmanagementapp",
       "edgeToEdgeEnabled": true,
