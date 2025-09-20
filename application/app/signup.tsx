@@ -12,11 +12,13 @@ export default function Signup() {
   return (
     <GuestRoutes>
       <SafeAreaView style={styles.container}>
-        <View style={styles.form}>
+        <View style={styles.header}>
           <Text style={styles.title}>Let’s Join With Us</Text>
           <Text style={styles.subtitle}>
             Provide the necessary information and jump into the world of events
           </Text>
+        </View>
+        <View style={styles.form}>
           <Input
             label="Full Name"
             placeholder="Enter your valid email address here"
@@ -57,28 +59,33 @@ export default function Signup() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: primary,
     padding: 16,
+  },
+  header: {
+    paddingVertical: 16,
   },
   title: {
     fontSize: 28,
     fontWeight: '700',
     marginBottom: 8,
-    color: primary,
     textAlign: 'center',
+    color: '#fff',
   },
   subtitle: {
     fontSize: 15,
     fontStyle: 'italic',
-    color: '#555',
     textAlign: 'center',
+    color: '#fff',
+    opacity: 0.7,
     paddingHorizontal: 20,
     marginBottom: 24,
   },
   form: {
-    flex: 1,
     justifyContent: 'center',
-    paddingBottom: 100,
+    padding: 20,
+    backgroundColor: '#fff',
+    borderRadius: 12,
   },
   bottom: {
     marginTop: 'auto',

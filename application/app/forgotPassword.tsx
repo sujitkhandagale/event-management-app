@@ -4,51 +4,29 @@ import GuestRoutes from '@/security/GuestRoutes';
 import { primary } from '@/styles/colors';
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function Login() {
+export default function ForgotPassword() {
   const router = useRouter();
   return (
     <GuestRoutes>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <Text style={[styles.title, styles.main]}>Login</Text>
+          <Text style={[styles.title, styles.main]}>Forgot Password</Text>
         </View>
         <View style={styles.form}>
           <Input
             label="Email"
-            placeholder="Enter your valid email address here"
+            placeholder="Enter email address here"
             keyboardType="email-address"
             autoCapitalize="none"
           />
-          <Input
-            label="Password"
-            placeholder="Enter your valid password here"
-            secureTextEntry
-          />
           <View style={styles.actions}>
-            <TouchableOpacity
-              onPress={() => router.push('/forgotPassword')}
-              style={{
-                paddingVertical: 10,
-              }}
-            >
-              <Text
-                style={{
-                  textAlign: 'right',
-                  color: primary,
-                  fontWeight: '600',
-                }}
-              >
-                Forgot Password?
-              </Text>
-            </TouchableOpacity>
-            <Button text="Login" onPress={() => {}} />
+            <Button text="Submit" onPress={() => {}} />
             <View style={styles.signupRow}>
-              <Text style={styles.signupText}>Don’t have an account?</Text>
-              <TouchableOpacity onPress={() => router.push('/signup')}>
-                <Text style={styles.signupLink}> Sign up</Text>
+              <TouchableOpacity onPress={() => router.push('/login')}>
+                <Text style={styles.signupLink}>Back to login</Text>
               </TouchableOpacity>
             </View>
           </View>

@@ -41,7 +41,7 @@ export default function GettingStarted() {
   if (loading) {
     return (
       <View style={styles.loading}>
-        <ActivityIndicator size="large" color="#000" />
+        <ActivityIndicator size="large" color="#fff" />
       </View>
     );
   }
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: primary,
   },
   title: {
     fontSize: 36,

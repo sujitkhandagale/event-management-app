@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "slug": "networking",
+    "name": "Networking",
+    "image": "https://picsum.photos/200/200?random=11",
+    "eventCount": 2
+  },
+  {
+    "id": "2",
+    "slug": "business",
+    "name": "Business",
+    "image": "https://picsum.photos/200/200?random=12",
+    "eventCount": 1
+  },
+  {
+    "id": "3",
+    "slug": "health",
+    "name": "Health",
+    "image": "https://picsum.photos/200/200?random=13",
+    "eventCount": 1
+  },
+  {
+    "id": "4",
+    "slug": "food",
+    "name": "Food",
+    "image": "https://picsum.photos/200/200?random=14",
+    "eventCount": 1
+  },
+  {
+    "id": "5",
+    "slug": "music",
+    "name": "Music",
+    "image": "https://picsum.photos/200/200?random=15",
+    "eventCount": 1
+  },
+  {
+    "id": "6",
+    "slug": "art",
+    "name": "Art",
+    "image": "https://picsum.photos/200/200?random=16",
+    "eventCount": 1
+  },
+  {
+    "id": "7",
+    "slug": "technology",
+    "name": "Technology",
+    "image": "https://picsum.photos/200/200?random=17",
+    "eventCount": 1
+  },
+  {
+    "id": "8",
+    "slug": "sports",
+    "name": "Sports",
+    "image": "https://picsum.photos/200/200?random=18",
+    "eventCount": 1
+  },
+  {
+    "id": "9",
+    "slug": "film",
+    "name": "Film",
+    "image": "https://picsum.photos/200/200?random=19",
+    "eventCount": 1
+  },
+  {
+    "id": "10",
+    "slug": "literature",
+    "name": "Literature",
+    "image": "https://picsum.photos/200/200?random=20",
+    "eventCount": 1
+  }
+]
