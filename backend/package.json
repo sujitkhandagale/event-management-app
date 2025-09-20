@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "author": "Sujit Khandagale",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node server.js"
+  },
+  "type": "module",
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.3",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "nodemon": "^3.1.0",
+    "socket.io": "^4.8.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "prettier": "^3.6.2"
+  }
+}
