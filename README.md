@@ -5,7 +5,11 @@ This app enables users to create, join, and manage events with real-time updates
 
 ![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/home_banner.png?raw=true)
 
-## Tech Stack
+### ⚠️ **Disclaimer**  
+> This project is built **for educational purposes only**.  
+> I will **not take any responsibility** for data loss, misuse, or any kind of damage caused by using this project.
+
+### Tech Stack
 
 - **Frontend (Mobile App):** React Native (Expo) with TypeScript
 - **Backend:** Node.js, Express.js
@@ -15,7 +19,7 @@ This app enables users to create, join, and manage events with real-time updates
 - **Message Broker:** RabbitMQ (for email notifications & alerts)
 - **Code Quality:** ESLint (with TypeScript rules & Prettier integration)
 
-## Features
+### Features
 - 🔑 User Authentication – Secure Sign Up / Sign In with role-based access (organizer/attendee).
 - 🗂️ Browse Events – Explore a list of all available events with search & filters.
 - 📝 Join & RSVP – Register for events with slot availability checks and instant updates.
@@ -41,5 +45,5 @@ This app enables users to create, join, and manage events with real-time updates
    cd event-management-app
 
 ### Developer Note
-Get my all public and private project listing and latest blogs on https://sujitdev.in
-![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/home_banner.png?raw=true)
+Get my all public and private project listing and latest blogs.
+[![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/explore%20more%20porjects.gif?raw=true)](https://sujitdev.in)
