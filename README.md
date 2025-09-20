@@ -35,14 +35,56 @@ This app enables users to create, join, and manage events with real-time updates
 ## Getting Started
 
 ### Prerequisites
-- Node.js v18+
-- MongoDB (local or Atlas)
+
+i already shared docker compose files for required tools and db's if you want to go manual please get into official sites. thank you ❤️.
+
+- **Node.js v18+**  
+  Runtime for running JavaScript on the server.  
+  [Download Node.js](https://nodejs.org/en/download/)
+
+- **MongoDB (local or Atlas)**  
+  NoSQL database to store your application data.
+    - MongoDB Community Edition (local): [Download](https://www.mongodb.com/try/download/community)
+    - MongoDB Atlas (cloud): [Visit Atlas](https://www.mongodb.com/cloud/atlas)
+
+- **Redis**  
+  In-memory data store for caching, queues, or pub/sub.  
+  [Official Redis Download](https://redis.io/download)
+
+- **RabbitMQ**  
+  Message broker for handling asynchronous jobs and events.  
+  [Official RabbitMQ Download](https://www.rabbitmq.com/download.html)
+
+- **Docker** (Optional, for development environment)  
+  Containerization tool to run services like MongoDB, Redis, RabbitMQ easily.  
+  [Get Started with Docker](https://www.docker.com/get-started)
+
 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/event-management-app.git
+   git clone https://github.com/sujitkhandagale/event-management-app
    cd event-management-app
+   
+2. Install all required packages for backend and frontend
+   ```bash
+   cd backend
+   npm install
+   cd ../application
+   npm install
+   
+3. Setup environment variables
+   ```bash
+   cp .env.example .env
+   
+4. Start the development server
+   ```bash
+   cd backend
+   npm start
+   cd ../application
+   expo start
+   
+5. build the app and use. thanks me later.
 
 ### Developer Note
 [![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/explore%20more%20porjects.gif?raw=true)](https://sujitdev.in) </br>
