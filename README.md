@@ -39,3 +39,7 @@ This app enables users to create, join, and manage events with real-time updates
    ```bash
    git clone https://github.com/your-username/event-management-app.git
    cd event-management-app
+
+### Developer Note
+Get my all public and private project listing and latest blogs on https://sujitdev.in
+![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/home_banner.png?raw=true)
