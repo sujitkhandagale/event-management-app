@@ -45,5 +45,5 @@ This app enables users to create, join, and manage events with real-time updates
    cd event-management-app
 
 ### Developer Note
-Get my all public and private project listing and latest blogs.
 [![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/explore%20more%20porjects.gif?raw=true)](https://sujitdev.in)
+Get my all public and private project listing and latest blogs.
