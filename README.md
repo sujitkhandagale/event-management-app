@@ -14,16 +14,17 @@ This app enables users to create, join, and manage events with real-time updates
 - **Code Quality:** ESLint (with TypeScript rules & Prettier integration)
 
 ## Features
-
-- User Authentication (Sign Up / Sign In)
-- Browse List of All Events
-- Join Events with Slot Availability Check
-- Live Participants and Real-time Tracking
-- In-app Chat Section for Participants
-- Create New Events
-- Event Alerts & Scheduled Notifications
-- Email Alerts via RabbitMQ
-- Many more upcoming features...
+- 🔑 User Authentication – Secure Sign Up / Sign In with role-based access (organizer/attendee).
+- 🗂️ Browse Events – Explore a list of all available events with search & filters.
+- 📝 Join & RSVP – Register for events with slot availability checks and instant updates.
+- 👥 Live Participants Tracking – Monitor attendance in real time.
+- 💬 In-app Chat – Dedicated chat section for participants to connect.
+- 🆕 Create & Manage Events – Organizers can easily schedule, edit, and manage events.
+- 🔔 Event Alerts & Notifications – Stay updated with scheduled reminders.
+- 📧 Email Alerts via RabbitMQ – Automated notifications for important updates.
+- 📊 Event Analytics Dashboard – Track registrations, attendance & engagement.
+- 🌐 Responsive UI – Optimized for both web and mobile users.
+- 🔄 Continuous Updates – Many more features under development...
 
 ## Getting Started
 
