@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root      # Change for better security
+      MONGO_INITDB_ROOT_PASSWORD: password  # Change for better security
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+
+volumes:
+  mongo-data:
+    driver: local
+  mongo-config:
+    driver: local

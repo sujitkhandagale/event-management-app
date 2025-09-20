@@ -1,0 +1,41 @@
+services:
+  redis:
+    image: redis:latest
+    container_name: redis_dev
+    restart: always
+    networks:
+      - redis-network
+    ports:
+      - "6370:6379"
+    volumes:
+      - redis_dev:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    environment:
+      - REDIS_PASSWORD=password
+      - REDIS_MAX_MEMORY=1gb
+      - REDIS_CONNECT_TIMEOUT=30
+      - REDIS_MAXMEMORY_POLICY=noeviction
+    healthcheck:
+      test: ["CMD", "redis-cli", "-h", "localhost", "ping"]
+      interval: 30s
+      retries: 3
+      start_period: 5s
+      timeout: 5s
+
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: "0.5"
+        reservations:
+          memory: 512M
+          cpus: "0.25"
+
+volumes:
+  redis_dev:
+    driver: local
+
+networks:
+  redis-network:
+    driver: bridge
