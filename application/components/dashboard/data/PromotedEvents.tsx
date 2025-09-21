@@ -35,10 +35,9 @@ export default function PromotedEvents({ events = [] }: Props) {
         keyExtractor={item => item.id}
         renderItem={renderItem}
         contentContainerStyle={{ borderRadius: 12 }}
-        showsVerticalScrollIndicator={true}
         horizontal={false}
-        nestedScrollEnabled={true} // <-- important
-        scrollEnabled={true}
+        nestedScrollEnabled={true}
+        scrollEnabled={false}
         style={{
           borderRadius: 12,
           overflow: 'hidden',
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    paddingHorizontal: 24,
+    paddingHorizontal: 12,
   },
   header: {
     paddingVertical: 20,

@@ -14,6 +14,10 @@ export default function Login() {
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <Text style={[styles.title, styles.main]}>Login</Text>
+          <Text style={styles.subtitle}>
+            Get the best experience with us. login and explore the world of
+            events. music, movies, and more.
+          </Text>
         </View>
         <View style={styles.form}>
           <Input
@@ -81,12 +85,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   subtitle: {
-    fontSize: 15,
-    fontStyle: 'italic',
-    textAlign: 'center',
+    fontSize: 14,
     color: '#fff',
     opacity: 0.7,
-    paddingHorizontal: 20,
     marginBottom: 24,
   },
   form: {

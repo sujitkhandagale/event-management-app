@@ -5,7 +5,6 @@ import {
   ScrollView,
   StyleProp,
   StyleSheet,
-  View,
   ViewStyle,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -17,26 +16,27 @@ type Props = {
   safeStyle?: StyleProp<ViewStyle>;
 };
 
-export default function Wrapper({
-  children,
-  safeKeyboard = true,
-  style = {},
-  safeStyle = {},
-}: Props) {
+export default function Wrapper({ children, safeKeyboard = true }: Props) {
   return (
-    <KeyboardAvoidingView
-      style={[styles.flex]}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      keyboardVerticalOffset={safeKeyboard ? 64 : 0}
+    <SafeAreaView
+      style={{
+        flex: 1,
+      }}
     >
-      <ScrollView
-        contentContainerStyle={[styles.scrollView]} // Fix
-        keyboardShouldPersistTaps="handled"
-        showsVerticalScrollIndicator={false}
+      <KeyboardAvoidingView
+        style={[styles.flex]}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        keyboardVerticalOffset={safeKeyboard ? 64 : 0}
       >
-        {children}
-      </ScrollView>
-    </KeyboardAvoidingView>
+        <ScrollView
+          contentContainerStyle={[styles.scrollView]} // Fix
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
+          {children}
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 }
 

@@ -1,13 +1,21 @@
 import EventCard, { EventProps } from '@/components/event/card/EventCard';
 import { primary } from '@/styles/colors';
+import { useRouter } from 'expo-router';
 import React from 'react';
-import { View, StyleSheet, Text, FlatList } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
 type HomeEventsProps = {
   events: any[];
 };
 
 export default function HomeEvents({ events = [] }: HomeEventsProps) {
+  const router = useRouter();
   const renderItem = ({ item }: { item: EventProps }) => (
     <EventCard
       id={item.id}
@@ -30,7 +38,9 @@ export default function HomeEvents({ events = [] }: HomeEventsProps) {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Popular Events 🔥</Text>
-        <Text style={styles.all}>View all</Text>
+        <TouchableOpacity onPress={() => router.push('/events')}>
+          <Text style={styles.all}>View all</Text>
+        </TouchableOpacity>
       </View>
       <FlatList
         data={events}
@@ -56,7 +66,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     marginTop: -120,
-    paddingHorizontal: 24,
+    paddingHorizontal: 12,
   },
   header: {
     paddingVertical: 20,
@@ -68,6 +78,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 17,
+    fontWeight: 'bold',
     color: 'white',
   },
   all: {

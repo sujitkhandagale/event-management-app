@@ -42,7 +42,7 @@ export default function ChooseByCategory() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    paddingHorizontal: 22,
+    paddingHorizontal: 12,
   },
   header: {
     paddingVertical: 20,

@@ -21,6 +21,7 @@ export default function RootLayout() {
         <Stack.Screen name="forgotPassword" options={{ headerShown: false }} />
         <Stack.Screen name="dashboard" options={{ headerShown: false }} />
         <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="events" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </SafeAreaProvider>
