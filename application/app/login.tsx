@@ -44,7 +44,7 @@ export default function Login() {
                 Forgot Password?
               </Text>
             </TouchableOpacity>
-            <Button text="Login" onPress={() => {}} />
+            <Button text="Login" onPress={() => router.push('/dashboard')} />
             <View style={styles.signupRow}>
               <Text style={styles.signupText}>Don’t have an account?</Text>
               <TouchableOpacity onPress={() => router.push('/signup')}>
