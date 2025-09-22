@@ -16,7 +16,7 @@ export default function Dashboard() {
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
-        <StatusBar style="dark" />
+        <StatusBar backgroundColor="blue" translucent={false} />
         <UserInfo name="Test User" email="test@gmail.com" />
         <HomeEvents events={events} />
         <ChooseByCategory />

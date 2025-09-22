@@ -158,8 +158,8 @@ const styles = StyleSheet.create({
   infoRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 2,
-    gap: 5,
+    marginTop: 6,
+    gap: 8,
   },
   info: {
     fontSize: 13,
