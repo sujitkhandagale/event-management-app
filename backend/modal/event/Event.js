@@ -10,6 +10,9 @@ const EventSchema = new Schema(
     title: {
       type: String,
     },
+    category: {
+      type: String,
+    },
     description: {
       type: String,
     },
@@ -21,6 +24,9 @@ const EventSchema = new Schema(
       type: Date,
       default: null, // null for unlimited
     },
+    location: {
+      type: String,
+    },
     slots: {
       type: Number,
       default: null, // null for unlimited
@@ -31,6 +37,10 @@ const EventSchema = new Schema(
     },
     publishedAt: {
       type: Date,
+    },
+    images: {
+      type: Array,
+      default: [],
     },
   },
   {
