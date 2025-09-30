@@ -10,7 +10,8 @@
     "lint": "expo lint",
     "doctor": "npx expo-doctor",
     "build": "expo build:android",
-    "prebuild": "expo prebuild"
+    "prebuild": "expo prebuild",
+    "clean" : "rm -rf node_modules package-lock.json yarn.lock"
   },
   "dependencies": {
     "@expo/metro-runtime": "^6.1.2",
@@ -43,6 +44,7 @@
     "react-native-reanimated": "~4.1.0",
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
+    "react-native-svg": "^15.13.0",
     "react-native-vector-icons": "^10.3.0",
     "react-native-web": "~0.21.0",
     "react-native-worklets": "0.5.1",
@@ -53,6 +55,7 @@
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
     "prettier": "^3.6.2",
+    "react-native-svg-transformer": "^1.5.1",
     "typescript": "~5.9.2"
   },
   "private": false

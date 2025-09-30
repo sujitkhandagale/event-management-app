@@ -32,6 +32,7 @@ export default function HomeEvents({ events = [] }: HomeEventsProps) {
       joined={item.joined}
       isJoined={item.isJoined}
       style={{ marginRight: 10, width: 230 }}
+      onPress={() => router.push(`/event/${item?.id}?title=${item?.title}`)}
     />
   );
   return (
