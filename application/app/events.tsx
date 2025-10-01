@@ -1,10 +1,9 @@
 import EventCard, { EventProps } from '@/components/event/card/EventCard';
-import Wrapper from '@/hook/wrapper';
+import TestEvents from '@/data/events.json';
 import { primary } from '@/styles/colors';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, TextInput, View } from 'react-native';
-import TestEvents from '@/data/events.json';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Events() {

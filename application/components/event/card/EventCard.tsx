@@ -54,7 +54,12 @@ export default function EventCard({
       activeOpacity={0.8}
     >
       <View style={styles.details}>
-        <Image source={{ uri: image }} style={styles.image} />
+        <Image
+          source={{ uri: image }}
+          width={200}
+          height={200}
+          style={styles.image}
+        />
         <View
           style={{
             paddingVertical: 6,

@@ -3,7 +3,15 @@ import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { useRouter } from 'expo-router';
 
 type Props = {
   name: string;
@@ -11,6 +19,7 @@ type Props = {
 };
 
 export default function UserInfo({ name, email }: Props) {
+  const router = useRouter();
   return (
     <LinearGradient
       colors={['#202020', '#181819']} // gradient colors
@@ -19,6 +28,14 @@ export default function UserInfo({ name, email }: Props) {
     >
       <View style={styles.container}>
         {/* Profile Section */}
+        <View style={styles.options}>
+          <TouchableOpacity>
+            <Ionicons name="notifications" size={20} color="#fff" />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Ionicons name={'settings'} size={20} color="#fff" />
+          </TouchableOpacity>
+        </View>
         <View style={styles.header}>
           <Image
             src={`https://avatar.iran.liara.run/username?username=${name}`}
@@ -26,9 +43,11 @@ export default function UserInfo({ name, email }: Props) {
           />
           <View style={styles.bio}>
             <Text style={styles.name}>{name}</Text>
-            <Text style={styles.email}>{email}</Text>
           </View>
-          <View style={styles.location}>
+          <TouchableOpacity
+            onPress={() => router.push('/location')}
+            style={styles.location}
+          >
             <Text
               style={{
                 color: '#b5b3b3',
@@ -37,10 +56,10 @@ export default function UserInfo({ name, email }: Props) {
               Current Location
             </Text>
             <View style={styles.row}>
-              <Text style={styles.address}>Mumbai 70001</Text>
+              <Text style={styles.address}>Mumbai - 70001</Text>
               <Ionicons name={'location'} color={primary} size={20} />
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.searchBox}>
           <Ionicons
@@ -63,11 +82,20 @@ export default function UserInfo({ name, email }: Props) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 44,
+    paddingTop: 10,
     paddingVertical: 140,
     padding: 20,
     paddingHorizontal: 12,
   },
+  options: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    gap: 18,
+    alignItems: 'center',
+    paddingVertical: 16,
+    paddingHorizontal: 4,
+  },
+
   header: {
     flexDirection: 'row',
     alignItems: 'center',

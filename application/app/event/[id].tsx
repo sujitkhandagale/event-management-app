@@ -2,23 +2,26 @@ import { EventProps } from '@/components/event/card/EventCard';
 import { primary } from '@/styles/colors';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
+import {
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  StyleSheet,
+  View,
+} from 'react-native';
 
 export default function Id() {
   const { id, title } = useLocalSearchParams();
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const navigation = useNavigation();
   const [eventInformation, setEventInformation] = useState<EventProps | null>(
     null,
   );
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(false);
     navigation.setOptions({
       title: title,
-      headerStyle: { backgroundColor: primary },
-      headerTintColor: '#fff',
       headerTitleStyle: { fontWeight: 'bold', fontSize: 14 },
     });
   }, [id, navigation, title]);
@@ -35,11 +38,14 @@ export default function Id() {
           <ActivityIndicator size={'large'} color={primary} />
         </View>
       )}
-      <View>
-        <Svg width={24} height={24} viewBox="0 0 24 24">
-          <Path d="M12 2L2 22h20L12 2z" fill="purple" />
-        </Svg>
-      </View>
+      <ScrollView>
+        <View style={styles.wallpaper}>
+          <Image
+            source={{ uri: 'https://picsum.photos/1080/1080?random=1' }}
+            style={styles.wallpaper}
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 }
@@ -47,7 +53,6 @@ export default function Id() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
   },
   loader: {
     flex: 1,
@@ -55,5 +60,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     zIndex: 1,
+  },
+  wallpaper: {
+    height: 400,
+    width: '100%',
+    resizeMode: 'cover',
+    position: 'relative',
+    overflow: 'hidden',
+    objectFit: 'cover',
   },
 });
