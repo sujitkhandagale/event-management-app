@@ -3,7 +3,7 @@
 A full-stack **Event Management Mobile Application** built using the **MERN stack with React Native (Expo)**.  
 This app enables users to create, join, and manage events with real-time updates, chat, and alerts.
 
-![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/home_banner.png?raw=true)
+![Home Banner](https://github.com/sujitkhandagale/event-management-app/blob/main/screenshots/poster.png?raw=true)
 
 ### ⚠️ **Disclaimer**  
 > This project is built **for educational purposes only** and **still in development**.  
