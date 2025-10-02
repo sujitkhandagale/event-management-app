@@ -11,6 +11,8 @@ module.exports = defineConfig([
       'no-console': 'error',
       'no-debugger': 'error',
       'no-unused-vars': 'error',
+      'arrow-parens': ['error', 'always'],
+      'arrow-body-style': ['error', 'always'],
     },
   },
 ]);

@@ -1,6 +1,4 @@
-import CustomHeader from '@/components/header/CustomHeader';
 import MyAddress from '@/components/location/address/MyAddress';
-import { primary } from '@/styles/colors';
 import { useNavigation } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
@@ -8,6 +6,7 @@ import { View } from 'react-native';
 export default function Location() {
   const navigation = useNavigation();
   const [screen, setScreen] = useState<string>('address');
+
   useEffect(() => {
     navigation.setOptions({
       title: 'My Address',

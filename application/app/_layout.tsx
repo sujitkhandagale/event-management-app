@@ -13,6 +13,21 @@ export default function RootLayout() {
           options={{ title: 'Settings', headerShown: false }}
         />
         <Stack.Screen
+          name="notifications"
+          options={{
+            title: 'Notifications',
+            headerShown: true,
+            headerBackTitle: 'Back',
+            headerTitleStyle: {
+              fontSize: 14,
+            },
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: '#202020',
+            },
+          }}
+        />
+        <Stack.Screen
           name="login"
           options={{ headerShown: false, title: 'Login' }}
         />

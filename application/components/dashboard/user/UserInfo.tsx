@@ -15,10 +15,9 @@ import { useRouter } from 'expo-router';
 
 type Props = {
   name: string;
-  email: string;
 };
 
-export default function UserInfo({ name, email }: Props) {
+export default function UserInfo({ name }: Props) {
   const router = useRouter();
   return (
     <LinearGradient
@@ -27,12 +26,19 @@ export default function UserInfo({ name, email }: Props) {
       end={{ x: 1, y: 1 }}
     >
       <View style={styles.container}>
-        {/* Profile Section */}
         <View style={styles.options}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              return router.push('/notifications');
+            }}
+          >
             <Ionicons name="notifications" size={20} color="#fff" />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              return router.push('/settings');
+            }}
+          >
             <Ionicons name={'settings'} size={20} color="#fff" />
           </TouchableOpacity>
         </View>
@@ -45,7 +51,9 @@ export default function UserInfo({ name, email }: Props) {
             <Text style={styles.name}>{name}</Text>
           </View>
           <TouchableOpacity
-            onPress={() => router.push('/location')}
+            onPress={() => {
+              return router.push('/location');
+            }}
             style={styles.location}
           >
             <Text
@@ -94,6 +102,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 16,
     paddingHorizontal: 4,
+    paddingRight: 16,
   },
 
   header: {

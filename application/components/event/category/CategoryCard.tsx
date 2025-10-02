@@ -1,6 +1,5 @@
-import { primary } from '@/styles/colors';
 import React from 'react';
-import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export type CategoryProps = {
   id: string;
@@ -22,7 +21,9 @@ export default function CategoryCard({
       key={id}
       style={styles.container}
       activeOpacity={0.8}
-      onPress={() => onPress?.(slug)}
+      onPress={() => {
+        return onPress?.(slug);
+      }}
     >
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.overlay} />

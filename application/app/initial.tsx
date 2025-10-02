@@ -17,7 +17,7 @@ export default function Initial() {
       setIsLogged(false);
       setLoading(false);
     }, 2000);
-    return () => clearTimeout(timer);
+    return () => {return clearTimeout(timer)};
   }, [isLogged]);
 
   useEffect(() => {

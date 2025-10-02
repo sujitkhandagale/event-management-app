@@ -10,7 +10,7 @@ export default function Events() {
   const [searchText, setSearchText] = useState('');
   const events = TestEvents || [];
 
-  const renderItem = ({ item }: { item: EventProps }) => (
+  const renderItem = ({ item }: { item: EventProps }) => {return (
     <EventCard
       id={item.id}
       title={item.title}
@@ -26,7 +26,7 @@ export default function Events() {
       joined={item.joined}
       isJoined={item.isJoined}
     />
-  );
+  )};
   return (
     <>
       <View style={styles.container}>
@@ -45,7 +45,7 @@ export default function Events() {
         <View style={styles.events}>
           <FlatList
             data={events}
-            keyExtractor={item => item.id}
+            keyExtractor={(item) => {return item.id}}
             renderItem={renderItem}
             horizontal={false}
             nestedScrollEnabled={true}

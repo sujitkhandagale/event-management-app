@@ -33,7 +33,7 @@ export default function Login() {
           />
           <View style={styles.actions}>
             <TouchableOpacity
-              onPress={() => router.push('/forgotPassword')}
+              onPress={() => {return router.push('/forgotPassword')}}
               style={{
                 paddingVertical: 10,
               }}
@@ -48,10 +48,10 @@ export default function Login() {
                 Forgot Password?
               </Text>
             </TouchableOpacity>
-            <Button text="Login" onPress={() => router.push('/dashboard')} />
+            <Button text="Login" onPress={() => {return router.push('/dashboard')}} />
             <View style={styles.signupRow}>
               <Text style={styles.signupText}>Don’t have an account?</Text>
-              <TouchableOpacity onPress={() => router.push('/signup')}>
+              <TouchableOpacity onPress={() => {return router.push('/signup')}}>
                 <Text style={styles.signupLink}> Sign up</Text>
               </TouchableOpacity>
             </View>

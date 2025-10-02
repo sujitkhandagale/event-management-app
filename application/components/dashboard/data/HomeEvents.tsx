@@ -16,7 +16,7 @@ type HomeEventsProps = {
 
 export default function HomeEvents({ events = [] }: HomeEventsProps) {
   const router = useRouter();
-  const renderItem = ({ item }: { item: EventProps }) => (
+  const renderItem = ({ item }: { item: EventProps }) => {return (
     <EventCard
       id={item.id}
       title={item.title}
@@ -32,20 +32,20 @@ export default function HomeEvents({ events = [] }: HomeEventsProps) {
       joined={item.joined}
       isJoined={item.isJoined}
       style={{ marginRight: 10, width: 230 }}
-      onPress={() => router.push(`/event/${item?.id}?title=${item?.title}`)}
+      onPress={() => {return router.push(`/event/${item?.id}?title=${item?.title}`)}}
     />
-  );
+  )};
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Popular Events 🔥</Text>
-        <TouchableOpacity onPress={() => router.push('/events')}>
+        <TouchableOpacity onPress={() => {return router.push('/events')}}>
           <Text style={styles.all}>View all</Text>
         </TouchableOpacity>
       </View>
       <FlatList
         data={events}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => {return item.id}}
         renderItem={renderItem}
         contentContainerStyle={{ borderRadius: 12 }}
         showsVerticalScrollIndicator={false}

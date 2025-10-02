@@ -13,14 +13,14 @@ export default function ChooseByCategory() {
     setCategories(categoriesData);
   }, []);
 
-  const renderItem = ({ item }: { item: CategoryProps }) => (
+  const renderItem = ({ item }: { item: CategoryProps }) => {return (
     <CategoryCard
       id={item.id}
       slug={item.slug}
       name={item.name}
       image={item.image}
     />
-  );
+  )};
 
   return (
     <View style={styles.container}>
@@ -30,7 +30,7 @@ export default function ChooseByCategory() {
       </View>
       <FlatList
         data={categories}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => {return item.id}}
         renderItem={renderItem}
         horizontal
         showsHorizontalScrollIndicator={false}

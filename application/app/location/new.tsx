@@ -3,7 +3,7 @@ import Button from '@/components/button/Button';
 import Input from '@/components/input/Input';
 import OpenStreetMap from '@/components/map/OpenStreetMap';
 import { primary } from '@/styles/colors';
-import { useLocalSearchParams, useNavigation } from 'expo-router';
+import { useNavigation } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
   KeyboardAvoidingView,
@@ -41,7 +41,7 @@ export default function New() {
         <View style={styles.address}>
           <View style={styles.header}>
             <Text style={styles.title}>Enter Complete Address</Text>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <TouchableOpacity onPress={() => {return navigation.goBack()}}>
               <Close width={30} height={30} />
             </TouchableOpacity>
           </View>
@@ -76,9 +76,9 @@ export default function New() {
               Tags
             </Text>
             <View style={styles.tagRow}>
-              {predefinedTags?.map((item: string, index: number) => (
+              {predefinedTags?.map((item: string, index: number) => {return (
                 <TouchableOpacity
-                  onPress={() => setTag(item)}
+                  onPress={() => {return setTag(item)}}
                   key={index}
                   style={[styles.tag, tag === item ? styles.tagActive : {}]}
                 >
@@ -90,7 +90,7 @@ export default function New() {
                     {item}
                   </Text>
                 </TouchableOpacity>
-              ))}
+              )})}
             </View>
           </View>
           <View style={styles.button}>

@@ -25,7 +25,7 @@ export default function ForgotPassword() {
           <View style={styles.actions}>
             <Button text="Submit" onPress={() => {}} />
             <View style={styles.signupRow}>
-              <TouchableOpacity onPress={() => router.push('/login')}>
+              <TouchableOpacity onPress={() => {return router.push('/login')}}>
                 <Text style={styles.signupLink}>Back to login</Text>
               </TouchableOpacity>
             </View>

@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function PromotedEvents({ events = [] }: Props) {
-  const renderItem = ({ item }: { item: EventProps }) => (
+  const renderItem = ({ item }: { item: EventProps }) => {return (
     <EventCard
       id={item.id}
       title={item.title}
@@ -24,7 +24,7 @@ export default function PromotedEvents({ events = [] }: Props) {
       joined={item.joined}
       isJoined={item.isJoined}
     />
-  );
+  )};
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -32,7 +32,7 @@ export default function PromotedEvents({ events = [] }: Props) {
       </View>
       <FlatList
         data={events}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => {return item.id}}
         renderItem={renderItem}
         contentContainerStyle={{ borderRadius: 12 }}
         horizontal={false}

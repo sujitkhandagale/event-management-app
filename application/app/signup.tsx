@@ -45,7 +45,7 @@ export default function Signup() {
             <Button text="Register" onPress={() => {}} />
             <View style={styles.signupRow}>
               <Text style={styles.signupText}>You have an account?</Text>
-              <TouchableOpacity onPress={() => router.push('/login')}>
+              <TouchableOpacity onPress={() => {return router.push('/login')}}>
                 <Text style={styles.signupLink}> Sign in</Text>
               </TouchableOpacity>
             </View>

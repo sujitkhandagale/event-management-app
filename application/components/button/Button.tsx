@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
   },
   disabled: {
     backgroundColor: '#aaa',
+    opacity: 0.8,
   },
   text: {
     fontSize: 16,

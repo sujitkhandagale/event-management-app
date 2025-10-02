@@ -12,7 +12,8 @@
     "build": "expo build:android",
     "prebuild": "expo prebuild",
     "clean": "rm -rf node_modules package-lock.json yarn.lock .expo .expo-shared android/app/build",
-    "upgrade": "npm update @latest"
+    "upgrade": "npm update @latest",
+    "eslint": "npx eslint . --fix,"
   },
   "dependencies": {
     "@expo/metro-runtime": "^6.1.2",

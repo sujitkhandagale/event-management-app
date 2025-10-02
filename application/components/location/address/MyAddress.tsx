@@ -1,7 +1,11 @@
 import LocationPlaceholder from '@/assets/icons/location-pin-svgrepo-com.svg';
+import Dropdown, {
+  DropdownOption,
+} from '@/components/common/dropdown/Dropdown';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 import {
+  Alert,
   FlatList,
   StyleSheet,
   Text,
@@ -15,6 +19,11 @@ type Props = {
   address: any[];
 };
 
+const options: DropdownOption[] = [
+  { label: 'Edit', onPress: () => {return Alert.alert('Profile selected')} },
+  { label: 'Delete', onPress: () => {return Alert.alert('Address deleted')} },
+];
+
 export default function MyAddress({ address = [] }: Props) {
   const router = useRouter();
   const renderItem = ({ item }: { item: any }) => {
@@ -26,7 +35,12 @@ export default function MyAddress({ address = [] }: Props) {
           <Text style={styles.addressText}>{item?.address}</Text>
         </View>
         <View style={styles.option}>
-          <Ionicons name="ellipsis-vertical" size={20} color="#555" />
+          <Dropdown
+            options={options}
+            button={
+              <Ionicons name="ellipsis-vertical" size={20} color="#555" />
+            }
+          />
         </View>
       </View>
     );
@@ -34,7 +48,7 @@ export default function MyAddress({ address = [] }: Props) {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => router.push('/location/new')}
+        onPress={() => {return router.push('/location/new')}}
         style={styles.addAddress}
       >
         <Plus width={24} height={24} />

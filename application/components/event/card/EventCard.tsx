@@ -12,19 +12,19 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 export type EventProps = {
-  title: string;
-  description: string;
-  image: string;
-  location: string;
-  date: string;
-  time: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  location?: string;
+  date?: string;
+  time?: string;
   price?: string;
   category?: string;
   id: string;
   onPress?: () => void;
   isFavorite?: boolean;
   onFavoritePress?: () => void;
-  members: any[];
+  members?: any[];
   joined?: number;
   isJoined?: boolean;
   style?: StyleProp<ViewStyle>;
